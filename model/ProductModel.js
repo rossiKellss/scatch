@@ -12,5 +12,5 @@ const productSchema = new mongoose.Schema({
   textColor: String,
 });
 
-const Product=new mongoose.model(productSchema);
+const Product=new mongoose.model("Product",productSchema);
 

@@ -1,6 +1,6 @@
 const { Schema, model, default: mongoose } = require("mongoose");
 
-const userSchema = new Schema({
+const ownerSchema = new Schema({
   userName: {
     type: String,
     required: true,
@@ -17,9 +17,9 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  cart: [{ type: mongoose.Schema.ObjectId, ref: "Cart" }],
-  isAdmin:Boolean,
-  orders: [],
+  products: [],
+  gstNum:String
   
 });
-module.exports=new model("User",userSchema);
+
+module.exports=new model("Owner",ownerSchema);
